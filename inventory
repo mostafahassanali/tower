@@ -2,6 +2,7 @@
 ansible1
 ansible2
 ansible4
+ansible5
 
 [ubuntu]
 ubuntu
