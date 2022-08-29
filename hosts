@@ -1,0 +1,13 @@
+[proxy]
+managed_01
+
+[web]
+apache
+
+[proxy:vars]
+ansible_user=student
+ansible_password=iti
+
+[web:vars]
+ansible_user=student
+ansible_password=iti

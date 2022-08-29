@@ -1,0 +1,15 @@
+- name: create user
+  hosts: web
+  gather_facts: no
+  remote_user: root
+  tasks:
+  - name: create user
+    user:
+      name: "{{ username }}"
+      password: "{{ password | password_hash('sha512', 'salt') }}"
+    
+
+  - name: set user as sudoer
+    lineinfile:
+      path: /etc/sudoers
+      line: "student    ALL=(ALL)   NOPASSWD: ALL" 
