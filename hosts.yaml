@@ -1,0 +1,13 @@
+all:
+  children:
+    proxy:
+      hosts:
+        managed_01:
+          ansible_password: iti
+          ansible_user: student
+    ungrouped: {}
+    web:
+      hosts:
+        apache:
+          ansible_password: iti
+          ansible_user: student
